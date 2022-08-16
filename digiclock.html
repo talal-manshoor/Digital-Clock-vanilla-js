@@ -8,6 +8,11 @@
         body{
             background-color: black;
             justify-content: center;
+            background-image: url(./morning.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100%;
         }
         #clock{
             position: absolute;
@@ -21,21 +26,24 @@
             justify-content:center ;
             color: white;
             font-size: 40px;
+            opacity: 0.8;
             -webkit-text-stroke: 1px black;
-            background-color: indigo;
+            background-color: rgb(24, 8, 36);
             
             
         }
         h1{
             color: blue;
             position: absolute;
+            -webkit-text-stroke: 0.5px white;
+            opacity: 1;
             left: 43%;
             top: 30%;
         }
     </style>
     <title>DIGITAL CLOCK</title>
 </head>
-<body>
+<body id="bbg">
     <h1>DIGITAL CLOCK</h1>
     <script src="./digiclock.js" defer></script>
     <div id="clock"></div>

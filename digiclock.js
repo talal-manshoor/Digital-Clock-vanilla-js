@@ -1,3 +1,4 @@
+const background = document.getElementById("bbg");
 let clock = () => {
     let date = new Date();
     let hours = date.getHours();
@@ -28,6 +29,19 @@ else(100>milliSeconds && milliSeconds>10)
 
     let time = `${hours} : ${minutes} : ${seconds} : ${milliSeconds} ${timePeriod}`;
     document.getElementById("clock").innerHTML = time;
+    if(timePeriod == "AM"){
+        if(hours>6){
+            background.style.backgroundImage = "url('./morning.jpg')";    
+        }else{
+            background.style.backgroundImage = "url('./night.jpg')";
+        }
+    }else{
+        if(hours<6){
+        background.style.backgroundImage = "url('./noon.jpg')";
+        }else{
+            background.style.backgroundImage = "url('./evening.jpg')";
+        }
+    }
     setTimeout(clock , 1);
 };
 clock();
